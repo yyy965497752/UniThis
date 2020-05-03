@@ -1,0 +1,131 @@
+﻿
+@{
+    ViewData["Title"] = "CarBase";
+}
+
+
+@{
+    ViewData["Title"] = "GetCars";
+}
+<link href="D:\A_Githup\ycx\one\SoWereMVC\SoWereMVC\CssAndJs\Boots\bootstrap.css" rel="stylesheet" />
+<h1>GetCars</h1>
+<div>
+    <div class="row">
+        <div class="col-md-3">
+            <label>
+                汽车名字
+            </label>
+            <input type="text" id="takeKeyword" value="" />
+        </div>
+        <div class="col-md-3">
+            <label>
+                汽车类型
+            </label>
+            <select id="TypeCar">
+                <option value="0">--请选择--</option>
+
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label>
+                汽车品牌
+            </label>
+            <select id="CarBrand">
+                <option value="0">--请选择--</option>
+
+            </select>
+        </div>
+        <div class="col-md-2">
+
+            <input type="button" name="name" value="查询" onclick="SelectGetCars(keyword)" />
+        </div>
+        <div>
+            <input type="button" name="name" value="清空选项" onclick="Clear()" />
+        </div>
+    </div>
+
+    <table class="table table-danger">
+        <tr>
+            <td>编号</td>
+            <td>图片</td>
+            <td>汽车名字</td>
+            <td>汽车年份</td>
+            <td>汽车排量</td>
+            <td>个数</td>
+            <td>手动/自动</td>
+            <td>价格/日</td>
+            <td>地址</td>
+            <td>操作</td>
+        </tr>
+        <tbody id="CaseBody">
+        </tbody>
+
+    </table>
+
+
+
+
+</div>
+<script src="D:\A_Githup\ycx\one\SoWereMVC\SoWereMVC\CssAndJs\CssOrJS\jquery-1.10.2.js"></script>
+
+<script>
+    $(GetCars);
+    function GetCars() {
+        $.ajax({
+            url: 'http://localhost:36476/ycx/car',
+            type: 'get',
+            dataType: 'json',
+            success: function (data) {
+                $(data).each(
+                    function () {
+                        var GetCarOperation = ' <tr>< td >' + this.CarInfoID + '</td> <td>' + this.Image + '</td> <td>' + this.CarName + '</td> <td>' + this.Years + '</td><td>' + this.CC + '</td><td>' + this.Count + '</td><td>' + this.AMT + '</td><td>' + this.Price + '</td><td>' + this.Address + '</td>                           < td >' +@Html.ActionLink("详细信息","","",new { })+''+@Html.ActionLink("删除","","",new { })+'</td ></tr > '
+                        $("#CaseBody").append(GetCarOperation);
+
+                    }
+                );
+            }
+
+
+        });
+    }
+
+
+
+    function SelectGetCars(keyword) {
+        keyword = $("#takeKeyword").val();
+        $.ajax({
+            url: 'http://localhost:57894/api/zjlCar/get?Name='+keyword,
+            type: 'post',
+            data: {
+                keyword: $("#takeKeyword").val(),
+
+            },
+            dataType: 'json',
+            success: function (data) {
+                $(data).each(
+                    function () {
+                        var GetCarOperation = ' <tr>< td >' + this.CarInfoID + '</td> <td>' + this.Image + '</td> <td>' + this.CarName + '</td> <td>' + this.Years + '</td><td>' + this.CC + '</td><td>' + this.Count + '</td><td>' + this.AMT + '</td><td>' + this.Price + '</td><td>' + this.Address + '</td>                           < td >' +@Html.ActionLink("详细信息","","",new { })+''+@Html.ActionLink("删除","","",new { })+'</td ></tr > '
+                        $("#CaseBody").append(GetCarOperation);
+
+                    }
+                );
+            }
+
+
+        });
+    }
+
+    function Clear() {
+        location.href="/YcxCar/GetCars"
+
+    }
+
+
+
+
+</script>
+
+
+
+
+

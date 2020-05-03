@@ -1,0 +1,9 @@
+D:\A_Githup\ycx\one\oneCore\HelpCalss\bin\Debug\netcoreapp3.1\HelpCalss.deps.json
+D:\A_Githup\ycx\one\oneCore\HelpCalss\bin\Debug\netcoreapp3.1\HelpCalss.dll
+D:\A_Githup\ycx\one\oneCore\HelpCalss\obj\Debug\netcoreapp3.1\HelpCalss.csprojAssemblyReference.cache
+D:\A_Githup\ycx\one\oneCore\HelpCalss\obj\Debug\netcoreapp3.1\HelpCalss.AssemblyInfoInputs.cache
+D:\A_Githup\ycx\one\oneCore\HelpCalss\obj\Debug\netcoreapp3.1\HelpCalss.AssemblyInfo.cs
+D:\A_Githup\ycx\one\oneCore\HelpCalss\bin\Debug\netcoreapp3.1\HelpCalss.pdb
+D:\A_Githup\ycx\one\oneCore\HelpCalss\obj\Debug\netcoreapp3.1\HelpCalss.csproj.CoreCompileInputs.cache
+D:\A_Githup\ycx\one\oneCore\HelpCalss\obj\Debug\netcoreapp3.1\HelpCalss.dll
+D:\A_Githup\ycx\one\oneCore\HelpCalss\obj\Debug\netcoreapp3.1\HelpCalss.pdb

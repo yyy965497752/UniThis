@@ -2,8 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DocumentFormat.OpenXml.Office2013.Excel;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,36 +29,62 @@ namespace oneCore
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddCors(options =>
-            {
-                services.AddCors(options =>{
+            //services.AddCors(options =>
+            //{
+            //    services.AddCors(options =>
+            //    {
 
-                    options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowCredentials().Build());
-                });
-                services.AddControllers();
-                
+            //        options.AddPolicy("so", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowCredentials().Build());
+            //    });
+            //    services.AddControllers();            
 
-                options.AddPolicy("CorsPolicy",
-                    builder => builder.AllowAnyOrigin()
-                    .AllowAnyMethod()
+
+            //});
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy("CorsPolicy",
+            //        builder => builder.AllowAnyOrigin()
+            //        .AllowAnyMethod()
+            //        .AllowAnyHeader()
+            //        .AllowCredentials().Build());
+            //});
+            services.AddCors(
+                options=> options.AddPolicy(
+                    "first",builder=> builder.AllowAnyOrigin().AllowAnyMethod()
                     .AllowAnyHeader()
-                    .AllowCredentials());
-            });
-            services.AddControllers(
-                
+                    )
                 );
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(
+                opt => { opt.LoginPath = new PathString("/to/cook"); }
+                ) ;
+
+
+
+
+
+            services.AddControllers();
 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
+            //app.UseHttpsRedirection().UseCors(builder =>
+            //builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
+
             app.UseRouting();
+
+            app.UseCors("first");
 
             app.UseAuthorization();
 

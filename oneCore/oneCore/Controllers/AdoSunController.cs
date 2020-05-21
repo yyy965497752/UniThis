@@ -12,10 +12,12 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Configuration;
 using oneCore.Clsscar;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Cors;
 
 namespace oneCore.Controllers
 {
-    [Route("wx")]
+    [Produces("application/json")]   
+    [Route("wx")]    
     [ApiController]
     public class AdoSunController : ControllerBase
     {
@@ -50,6 +52,25 @@ namespace oneCore.Controllers
             }
 
             return Ok(authors);
+        }
+        [HttpGet,Route("len")]       
+        public ActionResult<IEnumerable<CarDetails>> ten(string ToName,string Topin)
+        {
+            
+            var Rather = new List<CarDetails>();
+            using (SqlConnection connection=new SqlConnection(_connectionString))
+            {
+                SqlCommand command = new SqlCommand($"select * from carinfo where carName like '%{ToName}%' or AMT like '%{Topin}%'",connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Rather.Add(ConnHelper.ADONetToClass<CarDetails>(reader));
+                }
+
+            }
+            return Ok(Rather);
+        
         }
 
 

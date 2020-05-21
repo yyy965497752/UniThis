@@ -1,0 +1,134 @@
+﻿@*@model IEnumerable<SoWereMVC.Models.CarBaseSens>*@
+@model Sakura.AspNetCore.IPagedList<SoWereMVC.Models.CarBaseSens>
+@{
+    ViewData["Title"] = "BaseTool";
+}
+    <link href="~/ToolCss/MySelf.css" rel="stylesheet" />
+<div>
+    <div class="row">
+        <div class="col-md-3">
+            <label>
+                汽车名字
+            </label>
+            <input type="text" id="takeKeyword" value="" />
+        </div>
+        <div class="col-md-3">
+            <label>
+                汽车类型
+            </label>
+            <select id="TypeCar">
+                <option value="0">--请选择--</option>
+
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label>
+                汽车品牌
+            </label>
+            <select id="CarBrand">
+                <option value="0">--请选择--</option>
+
+            </select>
+        </div>
+        <div class="col-md-2">
+
+            <input type="button" name="name" value="查询" onclick="SelectGetCars()" />
+        </div>
+        <div>
+            <input type="button" name="name" value="清空选项" onclick="Clear()" />
+        </div>
+    </div>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    编号
+                </th>
+                <th>
+                    图片
+                </th>
+                <th>
+                    汽车名字
+                </th>
+                <th>
+                    汽车年份
+                </th>
+                <th>
+                    汽车排量
+                </th>
+                <th>
+                    个数
+                </th>
+                <th>
+                    手动/自动
+                </th>
+                <th>
+                    价格/日
+                </th>
+                <th>
+                    地址
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CarInfoID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Image)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CarName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Years)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CC)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AMT)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Address)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Count)
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="row">
+        <div class="col-md-6">
+
+        </div>
+        <div class="col-md-6">
+            <pager source="Model" />
+        </div>
+
+    </div>
+    
+   
+</div>
+
+<script>
+    function SelectGetCars() {
+        location.href = "/";
+    }
+
+</script>

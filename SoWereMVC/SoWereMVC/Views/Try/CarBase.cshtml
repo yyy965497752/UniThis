@@ -1,131 +1,201 @@
-﻿
-@{
-    ViewData["Title"] = "CarBase";
+﻿@{
+    Layout = null;
 }
 
+<!DOCTYPE html>
 
-@{
-    ViewData["Title"] = "GetCars";
-}
-<link href="D:\A_Githup\ycx\one\SoWereMVC\SoWereMVC\CssAndJs\Boots\bootstrap.css" rel="stylesheet" />
-<h1>GetCars</h1>
-<div>
-    <div class="row">
-        <div class="col-md-3">
-            <label>
-                汽车名字
-            </label>
-            <input type="text" id="takeKeyword" value="" />
-        </div>
-        <div class="col-md-3">
-            <label>
-                汽车类型
-            </label>
-            <select id="TypeCar">
-                <option value="0">--请选择--</option>
+<html lang="zh">
+<head>
+    <title></title>
+   
+    <meta charset="utf-8" />
 
-            </select>
-        </div>
-        <div class="col-md-3">
-            <label>
-                汽车品牌
-            </label>
-            <select id="CarBrand">
-                <option value="0">--请选择--</option>
+    <link href="~/AllClass/Content/sharestyle.css" rel="stylesheet" />
+    <link href="~/AllClass/Content/Site.css" rel="stylesheet" />
+    <link href="~/AllClass/Content/main.css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            margin: 0px;
+            padding: 0px;
 
-            </select>
-        </div>
-        <div class="col-md-2">
+        }
 
-            <input type="button" name="name" value="查询" onclick="SelectGetCars(keyword)" />
+        
+        
+    </style>
+ 
+    <script src="~/AllClass/Scripts/jquery-1.8.3.min.js"></script>
+
+    <script type="text/javascript">
+        function ShowMenuList(id) {
+            var objectobj = document.getElementById(id);
+            var dtObj = document.getElementById("dt_" + id);
+            if (objectobj.style.display == "none") {
+                objectobj.style.display = "";
+                dtObj.setAttribute("class", "head2");
+                //其它菜单折叠
+                $(dtObj).parent().parent().find("dt").not(dtObj).attr("class", "head1"); //折叠
+                $(objectobj).parent().parent().find("ul").not(objectobj).css("display", "none"); //隐藏菜单子项
+            } else {
+                objectobj.style.display = "none";
+                dtObj.setAttribute("class", "head1");
+            }
+        }
+        //控制菜单模块的显示和隐藏
+        function showDivMenu(divId) {
+            $("#" + divId).css("visibility", "visible");
+            $("#" + divId).siblings("div").css("visibility", "hidden");
+        }
+        $(function () {
+            $(".box_n li a").click(function () {
+                $(".box_n li a").removeClass("nav_sub");
+                $(this).addClass("nav_sub");
+            });
+        });
+        function goNewPage(url, name) {
+            self.parent.frames["mainFrame"].addTab(url, name);
+        }
+
+
+        //头部
+        //控制Left视图中菜单模块的显示
+        function showLeftList(divId) {
+            self.parent.frames["leftFrame"].showDivMenu(divId);
+        }
+        //菜单键及高亮显示
+        $(function () {
+            $(".nav_list ul li a").click(function () {
+                $(".nav_list ul li a").css("background-color", "");
+                $(".nav_list ul li a").css("color", "#ceebff");
+                $(this).css("background-color", "#66d354");
+                $(this).css("color", "white");
+            });
+        });
+
+    </script>
+</head>
+
+
+<body>
+
+
+
+    <div class="index_header">
+        <div class="index_headertop">
+            <div class="index_logo">
+                <a href="#">
+                    <img src="~/AllClass/Images/icon_11.png" />
+                </a>
+            </div>
+            <div class="lgstatus">
+                欢迎您，@ViewBag.UserName<i><em>20</em></i>可用余额：
+                <span>$@ViewBag.AvailableBalance</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="在线充值" class="btsty2" />
+            </div>
         </div>
-        <div>
-            <input type="button" name="name" value="清空选项" onclick="Clear()" />
+        <div class="clear"></div>
+        <div class="index_headerbot">
+            <div class="nav_list">
+                <ul>
+                    <li>
+                        <a href="#" onclick="showLeftList('divOrder')">业务管理</a>
+                        <div class="nav_out" style="display: none;">
+                            <i></i>
+                            <p><a href="#">订单管理</a></p>
+                            <p><a href="#">提单管理</a></p>
+                            <p><a href="#">身份证管理</a></p>
+                        </div>
+                    </li>
+                    <li class="slctd" onclick="showLeftList('divFinancial')">
+                        <a href="#">财务管理</a>
+                        <div class="nav_out" style="display: none;">
+                            <i></i>
+                            <p><a href="#">财务流水</a></p>
+                            <p><a href="#">提单对账</a></p>
+                            <p><a href="#">运单对账</a></p>
+                            <p><a href="#">异常费用对账</a></p>
+                            <p><a href="#">充值记录</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" onclick="showLeftList('divSysManage')">系统管理</a>
+                        <div class="nav_out" style="display: none;">
+                            <i></i>
+                            <p><a href="#">基本信息管理</a></p>
+                            <p><a href="#">认证管理</a></p>
+                            <p><a href="#">修改密码</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="fucnbx"><span><a href="#"><i class="ilChannel"></i>运单打印客户端下载</a></span> <span><a href="#"><i class="i2"></i>API文档</a></span> <span><a href="#"><i class="i3"></i>退出</a></span> </div>
         </div>
     </div>
 
-    <table class="table table-danger">
-        <tr>
-            <td>编号</td>
-            <td>图片</td>
-            <td>汽车名字</td>
-            <td>汽车年份</td>
-            <td>汽车排量</td>
-            <td>个数</td>
-            <td>手动/自动</td>
-            <td>价格/日</td>
-            <td>地址</td>
-            <td>操作</td>
-        </tr>
-        <tbody id="CaseBody">
-        </tbody>
 
-    </table>
+
+    @Html.
 
 
 
+    <div class="leftbar" id="divOrder">
+        <dl>
+            <dt class="head2" id="dt_ulOrder" onclick='ShowMenuList("ulOrder")'>订单管理</dt>
+            <ul class="box_n" id="ulOrder">
+                <li><a href="#">批量新建订单</a></li>
+                <li><a href="#">手工新建订单</a></li>
+                <li><a class="nav_sub" href="#">订单草稿<span>（3）</span></a></li>
+                <li><a href="#">已确认订单<span>（3）</span></a></li>
+                <li><a href="#">待发货订单<span>（3）</span></a></li>
+                <li><a href="#">已发货订单<span>（0）</span></a></li>
+                <li><a href="#">订单回收站<span>（0）</span></a></li>
+                <li><a href="#">退件<span>（0）</span></a></li>
+                <li><a href="#">批量修改订单</a></li>
+            </ul>
+        </dl>
+        <dl>
+            <dt class="head1" id="dt_ulLading" onclick='ShowMenuList("ulLading")'>提单管理</dt>
+            <ul class="box_n" id="ulLading" style="display: none;">
+                <li><a href="#">创建托盘</a></li>
+                <li><a href="#">未交货托盘<span>（6）</span></a></li>
+                <li><a href="#">已交货托盘</a></li>
+                <li><a href="#">创建交货单</a></li>
+                <li><a href="#">交货单列表</a></li>
+                <li><a href="#">待预扣提单<span>（3）</span></a></li>
+                <li><a href="#">已预扣提单</a></li>
+            </ul>
+        </dl>
+        <dl>
+            <dt class="head1" id="dt_ulIdentityCard" onclick='ShowMenuList("ulIdentityCard")'>身份证管理</dt>
+            <ul class="box_n" id="ulIdentityCard" style="display: none;">
+                <li><a href="#">待验证身份证<span>（3）</span></a></li>
+                <li><a href="#">无需验证身份证<span>（3）</span></a></li>
+                <li><a href="#">已验证身份证<span>（3）</span></a></li>
+            </ul>
+        </dl>
+    </div>
+    <div class="leftbar" id="divSysManage"></div>
+    <div class="leftbar" id="divFinancial">
+        <dl>
+            <dt id="dt_ulChannel" class="head2" onclick='ShowMenuList("ulChannel")'>渠道费用管理</dt>
+            <ul class="box_n" id="ulChannel">
+                <li><a href="#" onclick="goNewPage('a.html','渠道分类');">渠道分类</a></li>
+                <li><a target="mainFrame" id="channelManage" onclick="goNewPage('/Channel/Index','渠道管理');">渠道管理</a></li>
+                <li><a href="#">分区管理</a></li>
+                <li><a href="#">价格管理</a></li>
+            </ul>
+        </dl>
+        <dl>
+            <dt id="dt_ulFinancial" class="head1" onclick='ShowMenuList("ulFinancial")'>财务管理</dt>
+            <ul class="box_n" id="ulFinancial" style="display: none;">
+                <li><a href="#">财务流水</a></li>
+                <li><a href="#">提单对账</a></li>
+                <li><a href="#">运单对账</a></li>
+                <li><a href="#">异常费用对账</a></li>
+                <li><a href="#">充值记录</a></li>
+            </ul>
+        </dl>
+    </div>
+</body>
 
-</div>
-<script src="D:\A_Githup\ycx\one\SoWereMVC\SoWereMVC\CssAndJs\CssOrJS\jquery-1.10.2.js"></script>
-
-<script>
-    $(GetCars);
-    function GetCars() {
-        $.ajax({
-            url: 'http://localhost:36476/ycx/car',
-            type: 'get',
-            dataType: 'json',
-            success: function (data) {
-                $(data).each(
-                    function () {
-                        var GetCarOperation = ' <tr>< td >' + this.CarInfoID + '</td> <td>' + this.Image + '</td> <td>' + this.CarName + '</td> <td>' + this.Years + '</td><td>' + this.CC + '</td><td>' + this.Count + '</td><td>' + this.AMT + '</td><td>' + this.Price + '</td><td>' + this.Address + '</td>                           < td >' +@Html.ActionLink("详细信息","","",new { })+''+@Html.ActionLink("删除","","",new { })+'</td ></tr > '
-                        $("#CaseBody").append(GetCarOperation);
-
-                    }
-                );
-            }
-
-
-        });
-    }
-
-
-
-    function SelectGetCars(keyword) {
-        keyword = $("#takeKeyword").val();
-        $.ajax({
-            url: 'http://localhost:57894/api/zjlCar/get?Name='+keyword,
-            type: 'post',
-            data: {
-                keyword: $("#takeKeyword").val(),
-
-            },
-            dataType: 'json',
-            success: function (data) {
-                $(data).each(
-                    function () {
-                        var GetCarOperation = ' <tr>< td >' + this.CarInfoID + '</td> <td>' + this.Image + '</td> <td>' + this.CarName + '</td> <td>' + this.Years + '</td><td>' + this.CC + '</td><td>' + this.Count + '</td><td>' + this.AMT + '</td><td>' + this.Price + '</td><td>' + this.Address + '</td>                           < td >' +@Html.ActionLink("详细信息","","",new { })+''+@Html.ActionLink("删除","","",new { })+'</td ></tr > '
-                        $("#CaseBody").append(GetCarOperation);
-
-                    }
-                );
-            }
-
-
-        });
-    }
-
-    function Clear() {
-        location.href="/YcxCar/GetCars"
-
-    }
-
-
-
-
-</script>
-
-
-
-
-
+</html>

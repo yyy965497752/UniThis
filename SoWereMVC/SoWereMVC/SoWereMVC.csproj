@@ -5,7 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Catel.MVVM" Version="5.12.5" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
+    <PackageReference Include="Sakura.AspNetCore.Mvc.PagedList" Version="3.0.2" />
+    <PackageReference Include="Sakura.AspNetCore.PagedList" Version="2.0.2" />
   </ItemGroup>
 
 </Project>

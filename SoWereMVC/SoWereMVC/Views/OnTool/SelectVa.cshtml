@@ -1,0 +1,197 @@
+﻿
+@{
+    ViewData["Title"] = "SelectVa";
+}
+
+<h1>SelectVa</h1>
+
+@model Sakura.AspNetCore.IPagedList<SoWereMVC.Models.AllCarThis>
+
+
+<link href="~/ToolCss/bootstrap.css" rel="stylesheet" />
+<link href="~/ToolCss/MySelf.css" rel="stylesheet" />
+<link href="~/AllClass/Content/sharestyle.css" rel="stylesheet" />
+<link href="~/AllClass/Content/main.css" rel="stylesheet" />
+
+<div class="rightcont">
+
+
+
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+    <div class="row">
+        <div class="col-md-3">
+            <label>
+                汽车名字
+            </label>
+            <input type="text" id="takeKeyword" value="" />
+        </div>
+        <div class="col-md-3">
+            <label>
+                汽车类型
+            </label>
+            <select id="TypeCar">
+                <option value="0">--请选择--</option>
+
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label>
+                汽车品牌
+            </label>
+            <select id="CarBrand">
+                <option value="0">--请选择--</option>
+
+            </select>
+        </div>
+        <div class="col-md-2">
+
+            <input type="button" name="name" value="查询" onclick="ToSelect()" />
+        </div>
+        <div>
+            <input type="button" name="name" value="清空选项" onclick="Clear()" />
+        </div>
+    </div>
+
+    <table class="table tab-pane">
+        <thead>
+            <tr>
+                <th>
+                    编号
+                </th>
+                <th>
+                    图片
+                </th>
+                <th>
+                    汽车名字
+                </th>
+                <th>
+                    汽车年份
+                </th>
+                <th>
+                    汽车排量
+                </th>
+
+                <th>
+                    手动/自动
+                </th>
+                <th>
+                    价格/日
+                </th>
+
+                <th>
+                    汽车类型
+                </th>
+                <th>
+                    汽车品牌
+                </th>
+
+
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.carInfoID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Image)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CarName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Years)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CC)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AMT)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Brand)
+                    </td>
+
+                    <td>
+                        <input type="button" id="Xiang" value="汽车详情" />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="col-md-8">
+
+
+        </div>
+        <div>
+            <pager source="Model" />
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<script src="~/tooljs/jquery-1.10.2.js"></script>
+
+<script>
+    $(BrandSee);
+    function BrandSee() {
+        $.ajax({
+            url: 'http://localhost:36476/to/brandsee',
+            type: 'get',
+            datatype: 'json',
+            success: function (data) {
+                $(data).each(
+                    function () {
+                        $("#CarBrand").append('<option value= "' + this.carBrandID + '"> ' + this.brand + '</option>')
+                    });
+            }
+
+        });
+    }
+    $(TypeSee);
+    function TypeSee() {
+        $.ajax({
+            url: 'http://localhost:36476/to/typesee',
+            type: 'get',
+            datatype: 'json',
+            success: function (data) {
+                $(data).each(
+                    function () {
+                        $("#TypeCar").append('<option value= "' + this.carTypeID + '"> ' + this.type + '</option>')
+                    });
+            }
+
+        });
+    }
+    function ToSelect() {
+        var name = $("#takeKeyword").val();
+        var Pi = $("#CarBrand").val();
+        var typeSe = $("#TypeCar").val();
+        location.href = '/OnTool/SelectCars?carN=' + name + '& carPi=' + Pi + '& carT=' + typeSe + '';
+
+    }
+    function Clear() {
+        location.href = '/OnTool/GetCars'
+    }
+
+
+</script>
+

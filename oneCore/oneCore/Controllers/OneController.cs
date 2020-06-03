@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.Operations;
 using Newtonsoft.Json;
-using PagedList;
+
 
 namespace oneCore.Controllers
 {
@@ -32,7 +32,7 @@ namespace oneCore.Controllers
 
     public interface ICompanyRepository 
     {
-        Task<PagedList<Company>> GetCompaniesAsync();
+       
         Task<Company> GetCompanyAsync(Guid companyId);
         Task<IEnumerable<Company>> GetCompaniesAsync(IEnumerable<Guid> companyIds);
         void AddCompany(Company company);

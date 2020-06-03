@@ -102,6 +102,5 @@ D:\A_Githup\ycx\one\oneCore\oneCore\bin\Debug\netcoreapp3.1\DocumentFormat.OpenX
 D:\A_Githup\ycx\one\oneCore\oneCore\bin\Debug\netcoreapp3.1\System.IO.Packaging.dll
 D:\A_Githup\ycx\one\oneCore\oneCore\bin\Debug\netcoreapp3.1\AutoMapper.dll
 D:\A_Githup\ycx\one\oneCore\oneCore\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-D:\A_Githup\ycx\one\oneCore\oneCore\bin\Debug\netcoreapp3.1\PagedList.dll
 D:\A_Githup\ycx\one\oneCore\oneCore\obj\Debug\netcoreapp3.1\oneCore.csproj.CoreCompileInputs.cache
 D:\A_Githup\ycx\one\oneCore\oneCore\obj\Debug\netcoreapp3.1\oneCore.MvcApplicationPartsAssemblyInfo.cache

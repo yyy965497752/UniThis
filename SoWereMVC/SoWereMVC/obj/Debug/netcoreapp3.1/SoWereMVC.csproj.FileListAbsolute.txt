@@ -185,3 +185,4 @@ D:\A_Githup\ycx\one\SoWereMVC\SoWereMVC\obj\Debug\netcoreapp3.1\Razor\Views\OnTo
 D:\A_Githup\ycx\one\SoWereMVC\SoWereMVC\obj\Debug\netcoreapp3.1\Razor\Views\OnTool\Sova.cshtml.g.cs
 D:\A_Githup\ycx\one\SoWereMVC\SoWereMVC\obj\Debug\netcoreapp3.1\Razor\Views\OnTool\SelectVa.cshtml.g.cs
 D:\A_Githup\ycx\one\SoWereMVC\SoWereMVC\obj\Debug\netcoreapp3.1\SoWereMVC.csprojAssemblyReference.cache
+D:\A_Githup\ycx\one\SoWereMVC\SoWereMVC\obj\Debug\netcoreapp3.1\Razor\Views\New\tool.cshtml.g.cs

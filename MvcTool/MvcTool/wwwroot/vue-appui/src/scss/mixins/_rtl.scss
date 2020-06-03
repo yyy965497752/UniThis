@@ -1,0 +1,72 @@
+@mixin rtl($root-selector: null) {
+  @if ($root-selector) {
+    @at-root {
+      [dir="rtl"] #{$root-selector} &,
+      #{$root-selector}[dir="rtl"] & {
+        @content;
+      }
+    }
+  }
+
+  @else {
+    [dir="rtl"] &,
+    &[dir="rtl"] {
+      @content;
+    }
+  }
+}
+
+@mixin rtl-reflexive-box($base-property, $default-direction, $value, $root-selector: null) {
+  @if (index((right, left), $default-direction) == null) {
+    @error "Invalid default direction #{default-direction}. Please specifiy either right or left";
+  }
+
+  $left-value: $value;
+  $right-value: 0;
+
+  @if ($default-direction == right) {
+    $left-value: 0;
+    $right-value: $value;
+  }
+
+  @include rtl-reflexive-property($base-property, $left-value, $right-value, $root-selector);
+}
+
+@mixin rtl-reflexive-property($base-property, $left-value, $right-value, $root-selector: null) {
+  $prop-left: #{$base-property}-left;
+  $prop-right: #{$base-property}-right;
+
+  @include rtl-reflexive_($prop-left, $left-value, $prop-right, $right-value, $root-selector);
+}
+
+@mixin rtl-reflexive-position($pos, $value, $root-selector: null) {
+  @if (index((right, left), $pos) == null) {
+    @error "Invalid position #{pos}. Please specifiy either right or left";
+  }
+
+  $left-value: $value;
+  $right-value: initial;
+
+  @if ($pos == right) {
+    $right-value: $value;
+    $left-value: initial;
+  }
+
+  @include rtl-reflexive_(left, $left-value, right, $right-value, $root-selector);
+}
+
+@mixin rtl-reflexive_(
+  $left-property,
+  $left-value,
+  $right-property,
+  $right-value,
+  $root-selector: null
+) {
+  #{$left-property}: $left-value;
+  #{$right-property}: $right-value;
+
+  @include rtl($root-selector) {
+    #{$left-property}: $right-value;
+    #{$right-property}: $left-value;
+  }
+}

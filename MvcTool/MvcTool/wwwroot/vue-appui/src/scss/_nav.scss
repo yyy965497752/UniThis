@@ -1,0 +1,99 @@
+@import "mixins/rtl";
+
+$nav-bordered-font-weight: $font-weight-normal !default;
+$nav-bordered-font-weight-active: $font-weight-bold !default;
+$nav-bordered-color: inherit !default;
+$nav-bordered-color-active: $link-color !default;
+
+// Underline nav
+//
+// Extends `.nav` like other Bootstrap navs.
+
+.nav-bordered {
+  .nav-item {
+    float: left;
+    @include rtl {
+      float: right;
+    }
+
+    // Links rendered as pills
+    > a {
+      display: inline-block;
+      padding: ($spacer / 2) 0;
+      font-weight: $nav-bordered-font-weight;
+      color: $nav-bordered-color;
+      border-bottom: 4px solid transparent;
+
+      &:hover,
+      &:focus {
+        color: theme-color('primary');
+        background-color: transparent;
+      }
+    }
+
+    + li {
+      margin-left: ($spacer * 1.5);
+    }
+
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        font-weight: $nav-bordered-font-weight-active;
+        color: $nav-bordered-color-active;
+        border-bottom-color: theme-color('primary');
+      }
+    }
+  }
+
+  &.nav-justified {
+    > li + li {
+      margin-left: 0;
+    }
+    > li > a {
+      margin-bottom: 0;
+    }
+  }
+
+  &.nav-stacked {
+    flex-direction: column;
+
+    .nav-item {
+      display: block;
+      float: none;
+      @include rtl-reflexive-box(margin, left, 0);
+
+      + li {
+        margin-top: 0;
+      }
+
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border-left-color: theme-color('primary');
+          @include rtl {
+            border-left-color: transparent;
+            border-right-color: theme-color('primary');
+          }
+        }
+      }
+    }
+
+    > li > a {
+      display: block;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-bottom: 0;
+      @include rtl-reflexive-box(padding, right, 10px);
+      @include rtl-reflexive-box(padding, left, $spacer * 1.5);
+      @include rtl-reflexive-box(border, left, 4px solid transparent);
+
+      &:hover,
+      &:focus {
+        @include rtl-reflexive-box(border, left, 4px solid);
+      }
+    }
+  }
+}

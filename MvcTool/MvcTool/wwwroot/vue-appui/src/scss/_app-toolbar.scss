@@ -1,0 +1,52 @@
+@import "mixins/rtl";
+
+.app-toolbar {
+  z-index: 1;
+}
+
+.app-toolbar__row {
+  align-items: center;
+  min-height: 48px;
+  padding: 0 16px;
+}
+
+.app-toolbar__start {
+  max-width: 240px;
+}
+
+.app-toolbar__title {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+}
+
+.app-toolbar__drawer-toggle {
+  @include rtl-reflexive-box(margin, right, 1rem);
+
+  padding-right: 0;
+  padding-left: 0;
+  background: none;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.app-toolbar__btn,
+.app-toolbar__btn:visited,
+.app-toolbar__btn:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app-toolbar__btn {
+  @include rtl-reflexive-box(margin, right, 1rem);
+}
+
+.app-toolbar__btn.material-icons {
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
+  opacity: .72;
+
+  &:hover {
+    opacity: 1;
+  }
+}

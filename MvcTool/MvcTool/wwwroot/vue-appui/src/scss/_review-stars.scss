@@ -1,0 +1,26 @@
+.review-stars {
+  display: inline-block;
+  position: relative;
+  height: 1rem;
+  font-size: 1rem;
+  line-height: 1;
+  vertical-align: middle;
+
+  &::before {
+    position: absolute;
+    color: $gray-200;
+    content: "\2605\2605\2605\2605\2605";
+  }
+}
+
+.review-stars__inner {
+  display: block;
+  position: relative;
+  width: 80%;
+  overflow: hidden;
+
+  &::before {
+    color: theme-color('success');
+    content: "\2605\2605\2605\2605\2605";
+  }
+}

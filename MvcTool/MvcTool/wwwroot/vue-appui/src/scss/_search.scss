@@ -1,0 +1,236 @@
+@import "mixins/rtl";
+
+/*! Header */
+.MJF62LC-nb-b {
+  margin: 24px 0 0;
+  padding: 6px 24px;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+
+.MJF62LC-nb-e {
+  background-color: #fafafa;
+}
+
+.MJF62LC-nb-c {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -moz-box-align: center;
+  -webkit-box-align: center;
+  box-align: center;
+  -ms-flex-align: center;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.MJF62LC-u-b {
+  cursor: default;
+}
+
+.MJF62LC-u-d {
+  font-size: 24px;
+}
+
+.MJF62LC-nb-d {
+  cursor: pointer;
+  opacity: .54;
+}
+
+.MJF62LC-u-b {
+  cursor: default;
+}
+
+.MJF62LC-u-d {
+  font-size: 24px;
+}
+
+.MJF62LC-nb-a {
+  -ms-flex: 1 0 0;
+  -webkit-flex: 1 0 0;
+  flex: 1 0 0;
+  margin: 8px 0 8px 32px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+
+.MJF62LC-Jb-b {
+  position: relative;
+  width: 38px;
+  height: 24px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/*! Search Result */
+
+/* Item */
+.sr-a .sr-content-container {
+  display: flex;
+}
+
+.sr-a .sr-graphic {
+  @include rtl-reflexive-box(margin, right, 24px);
+
+  min-width: 60px;
+}
+
+.MJF62LC-hb-b img {
+  position: relative;
+  background-color: #fff;
+  // border-radius: 50%;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* link */
+.MJF62LC-ob-e {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all .218s;
+  background: #fff;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.sr-a .sr-content {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  -ms-word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+}
+
+.sr-a .sr-content .sr-title-container {
+  @include rtl-reflexive-box(margin, right, 48px);
+}
+
+.subhead2,
+h5 {
+  margin: 0;
+  color: rgb(33, 33, 33);
+  color: rgba(0, 0, 0, .87);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+}
+
+.sr-a .sr-content .sr-title {
+  position: relative;
+  color: inherit;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  -ms-word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+}
+
+.secondary-text {
+  opacity: .67;
+}
+
+.sr-desc {
+  // word-wrap: break-word;
+  min-height: 2rem;
+  margin-top: 8px;
+}
+
+.text {
+}
+
+.save-share-flag {
+  @include rtl-reflexive-position(right, 0);
+
+  display: flex;
+  position: absolute;
+  margin-top: 16px;
+  z-index: 1;
+}
+
+.save-share-flag .save-action {
+  padding: 8px 4px 8px 8px;
+  cursor: pointer;
+}
+
+.MJF62LC-x-d {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.MJF62LC-x-d > span {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 100%;
+  vertical-align: middle;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -ms-flex-align: center;
+}
+
+.sr-card {
+  position: relative;
+  transform: translateZ(0);
+  opacity: 1;
+  overflow: hidden;
+}
+
+.sr-card:not(:last-child) {
+  margin-bottom: 0;
+  border-bottom: 2px solid #eee;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.sr-card:not(:first-child) {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.MJF62LC-ob-c,
+.MJF62LC-ob-d {
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  color: rgba(255, 255, 255, 1);
+  font-size: $font-size-sm;
+  line-height: 1;
+  opacity: 1;
+}
+
+.MJF62LC-ob-d {
+  display: none;
+}
+
+.MJF62LC-ob-c,
+.MJF62LC-ob-d {
+  background-color: theme-color('primary');
+}
+
+.sr-title-container {
+  margin-bottom: 0;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  color: rgb(33,33,33);
+  color: rgba(0,0,0,.87);
+}

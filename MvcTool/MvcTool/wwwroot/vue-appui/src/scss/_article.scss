@@ -1,0 +1,33 @@
+.article{
+  &__eyebrow {
+    display: block;
+    margin-bottom: .375rem;
+    font-size: $font-size-sm;
+    line-height: 1.2;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: $spacer / 4;
+    color: inherit;
+    font-size: 1.5rem;
+    font-weight: $font-weight-bold;
+    line-height: 1.2;
+  }
+
+  &__meta {
+    display: flex;
+  }
+
+  &__description {
+    font-size: $font-size-sm;
+  }
+
+  &__as {
+  
+  }
+}
+
+.post-header {
+  margin-bottom: $spacer;
+}

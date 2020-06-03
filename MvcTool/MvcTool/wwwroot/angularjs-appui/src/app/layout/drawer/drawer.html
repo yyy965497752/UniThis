@@ -1,0 +1,124 @@
+<!-- Drawer scroll container -->
+<div class="app-layout-drawer-scroll">
+	<!-- Drawer logo -->
+	<div id="logo" class="drawer-header">
+		<a href="javascript:void(0)"><img class="img-responsive" src="assets/img/logo/logo-backend.png" title="AppUI" alt="AppUI" /></a>
+	</div>
+
+	<!-- Drawer navigation -->
+	<nav class="drawer-main">
+		<!-- Main navigation functionality (data-js-main-nav attribute is initialized in js/directives.js) -->
+		<ul class="nav nav-drawer" data-ui-nav-drawer>
+			<li class="nav-drawer-header" translate="drawer.nav.apps.APPS">Apps</li>
+			<li data-ui-sref-active="active">
+				<a data-ui-sref="dashboard">
+					<i class="ion-ios-speedometer-outline"></i><span class="nav-drawer-label" translate="drawer.nav.apps.DASHBOARD">Dashboard</span>
+				</a>
+			</li>
+			<li data-ui-sref-active="active">
+				<a data-ui-sref="calendar">
+					<i class="ion-ios-calendar-outline"></i><span class="nav-drawer-label" translate="drawer.nav.apps.CALENDAR">Calendar</span>
+				</a>
+			</li>
+			<li>
+				<a href="../../html/dist/index.html">
+					<i class="ion-social-html5-outline"></i><span class="nav-drawer-label" translate="drawer.nav.apps.HTML_VERSION">Html version</span>
+				</a>
+			</li>
+
+			<!-- Components -->
+			<li class="nav-drawer-header" translate="drawer.nav.components.COMPONENTS">Components</li>
+			<!-- UI -->
+			<li class="nav-item nav-item-has-subnav" data-ng-class="{ open: ( path.indexOf( '/ui/' ) > -1 ) }">
+				<a class="nav-submenu" data-toggle="nav-submenu" href="#">
+					<i class="ion-ios-calculator-outline"></i><span class="nav-drawer-label" translate="drawer.nav.components.ui.UI_ELEMENTS">UI Elements</span>
+				</a>
+				<ul class="nav nav-subnav">
+					<li data-ui-sref-active="active">
+						<a data-ui-sref="uiCards" translate="drawer.nav.components.ui.CARDS">Cards</a>
+					</li>
+					<li data-ui-sref-active="active">
+						<a data-ui-sref="uiAlerts" translate="drawer.nav.components.ui.ALERTS">Alerts</a>
+					</li>
+					<li data-ui-sref-active="active">
+						<a data-ui-sref="uiTabs" translate="drawer.nav.components.ui.TABS">Tabs</a>
+					</li>
+					<li data-ui-sref-active="active">
+						<a data-ui-sref="uiModalsTooltips" translate="drawer.nav.components.ui.MODALS_TOOLTIPS">Modals &amp; Tooltips</a>
+					</li>
+					<li data-ui-sref-active="active">
+						<a data-ui-sref="uiCardsDraggable" translate="drawer.nav.components.ui.DRAGGABLE">Draggable items</a>
+					</li>
+					<li data-ui-sref-active="active">
+						<a data-ui-sref="uiScrolling" translate="drawer.nav.components.ui.SCROLLING">Scrolling</a>
+					</li>
+					<li data-ui-sref-active="active">
+						<a data-ui-sref="uiSyntaxHighlight" translate="drawer.nav.components.ui.SYNTAX_HIGHLIGHT">Syntax Highlight</a>
+					</li>
+				</ul>
+			</li>
+
+			<!-- Tables -->
+			<li class="nav-item nav-item-has-subnav" data-ng-class="{open: ( path.indexOf( '/tables/' ) > -1 )}">
+				<a class="nav-submenu" data-toggle="nav-submenu" href="#">
+					<i class="ion-ios-list-outline"></i><span class="nav-drawer-label" translate="drawer.nav.components.tables.TABLES">Tables</span>
+				</a>
+				<ul class="nav nav-subnav">
+					<li data-ui-sref-active="active">
+						<a data-ui-sref="tablesTools" translate="drawer.nav.components.tables.TOOLS">Tools</a>
+					</li>
+					<li data-ui-sref-active="active">
+						<a data-ui-sref="tablesDatatables" translate="drawer.nav.components.tables.DATATABLES">DataTables</a>
+					</li>
+				</ul>
+			</li>
+
+			<!-- Forms -->
+			<li class="nav-item nav-item-has-subnav" data-ng-class="{open: (path.indexOf('/forms/') > -1)}">
+				<a class="nav-submenu" data-toggle="nav-submenu" href="#">
+					<i class="ion-ios-compose-outline"></i><span class="nav-drawer-label" translate="drawer.nav.components.forms.FORMS">Forms</span>
+				</a>
+				<ul class="nav nav-subnav">
+					<li data-ui-sref-active="active">
+						<a data-ui-sref="formsPickersSelect" translate="drawer.nav.components.forms.PICKERS_SELECT">Pickers &amp; Select</a>
+					</li>
+					<li data-ui-sref-active="active">
+						<a data-ui-sref="formsValidation" translate="drawer.nav.components.forms.VALIDATION">Validation</a>
+					</li>
+					<li data-ui-sref-active="active">
+						<a data-ui-sref="formsWizard" translate="drawer.nav.components.forms.WIZARD">Wizard</a>
+					</li>
+				</ul>
+			</li>
+
+			<!-- Maps -->
+			<li class="nav-item nav-item-has-subnav" data-ng-class="{open: ( path.indexOf( '/maps/' ) > -1)}">
+				<a class="nav-submenu" data-toggle="nav-submenu" href="#">
+					<i class="ion-ios-location-outline"></i><span class="nav-drawer-label" translate="drawer.nav.components.maps.MAPS">Maps</span>
+				</a>
+				<ul class="nav nav-subnav">
+					<li data-ui-sref-active="active">
+						<a data-ui-sref="mapsGoogle" translate="drawer.nav.components.maps.GOOGLE">Google</a>
+					</li>
+					<li data-ui-sref-active="active">
+						<a data-ui-sref="mapsGoogleFull" translate="drawer.nav.components.maps.GOOGLE_FULL">Google Full</a>
+					</li>
+				</ul>
+			</li>
+
+			<!-- Charts -->
+			<li class="nav-item" data-ng-class="{open: (path.indexOf('/charts/') > -1)}" data-ui-sref-active="active">
+				<a data-ui-sref="charts">
+					<i class="ion-ios-pie-outline"></i><span class="nav-drawer-label" translate="drawer.nav.components.CHARTS">Charts</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<!-- End drawer navigation -->
+
+	<div class="drawer-footer">
+		<p class="copyright"><span translate="drawer.footer.TEMPLATE_NAME">AppUI Template</span></a> &copy; <span data-util-show-year></span></p>
+		<a href="https://shapebootstrap.net/item/1525731/?ref=rustheme" target="_blank" rel="nofollow" translate="drawer.footer.TEMPLATE_PURCHASE">Purchase a license</a>
+	</div>
+</div>
+<!-- End drawer scroll container -->

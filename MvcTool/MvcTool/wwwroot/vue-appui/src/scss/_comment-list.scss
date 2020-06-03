@@ -1,0 +1,46 @@
+.comment-list {
+  width: 100%;
+}
+
+.child-comment-list {
+  @include rtl-reflexive-box(margin, left, auto);
+
+  width: calc(100% - 64px);
+  min-width: 240px;
+  margin-top: 1.25rem;
+  font-size: .812rem;
+}
+
+.comment-list-item {
+  margin-bottom: 1rem;
+}
+
+.comment {
+  display: flex;
+  position: relative;
+
+  &__image {
+    @include rtl-reflexive-box(margin, right, 1rem);
+  }
+
+  &__author {
+    display: inline-block;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0;
+    margin: 0;
+  }
+
+  &__timestamp {
+    @include rtl-reflexive-position(right, 0);
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    color: $text-muted;
+    font-size: $font-size-sm;
+    letter-spacing: 0;
+  }
+
+  &__description {
+    margin-bottom: $spacer / 2;
+  }
+}

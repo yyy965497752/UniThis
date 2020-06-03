@@ -1,0 +1,33 @@
+// List subheader
+.list-subheader {
+  margin: 24px 0 12px;
+  padding-right: $spacer;
+  padding-left: $spacer;
+  color: rgba(0, 0, 0, .654);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: .02em;
+  line-height: 16px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+// Grid subheader
+.grid-subheader {
+  display: block;
+  position: relative;
+  margin-bottom: -($spacer / 2);
+  color: $text-muted;
+  font-size: $font-size-base;
+  line-height: 24px;
+}
+
+.grid-subheader + .card {
+  margin-top: 24px;
+}
+
+.grid-subheader--small {
+  margin-bottom: $spacer;
+  font-size: $font-size-sm;
+  line-height: 16px;
+}

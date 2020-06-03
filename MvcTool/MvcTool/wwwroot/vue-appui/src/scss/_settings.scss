@@ -1,0 +1,25 @@
+.settings__title {
+  margin-top: 5px;
+  font-weight: $headings-font-weight;
+}
+
+.settings__row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.settings__text {
+  flex: 1;
+  margin-top: 5px;
+}
+
+.settings__end-detail {
+  width: 50px;
+  margin-top: 5px;
+  padding-left: 10px;
+}

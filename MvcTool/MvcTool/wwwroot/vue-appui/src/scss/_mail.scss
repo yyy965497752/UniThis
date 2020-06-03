@@ -1,0 +1,215 @@
+@import "mixins/rtl";
+
+.scroll-list-item {
+  width: 100%;
+}
+
+.jS {
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin: 6px 0;
+}
+
+// Avatar
+.iG {
+  display: flex;
+  display: -webkit-flex;
+  // height: 28px;
+  // margin: -4px 0;
+  position: relative;
+  // width: 72px;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+}
+
+.gi {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 28px;
+  object-fit: cover;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+}
+
+.J,
+.c4.uZGzjf .ej,
+.iG:hover > .ej {
+  // display: none;
+}
+
+.hY,
+.bg,
+.g6 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.hY {
+  display: inline-block;
+  width: 184px;
+}
+
+.lq {
+  display: flex;
+}
+
+// Content wrapper
+.rv {
+  -webkit-flex: 1;
+  flex: 1;
+  width: 0;
+  min-width: 0;
+  margin: 0 24px 0 8px;
+  word-wrap: break-word;
+}
+
+.f8 {
+  display: flex;
+  float: right;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+}
+
+.l9 {
+  display: flex;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+// Content
+.l9 {
+  display: flex;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.iK {
+  padding-left: 0;
+  list-style: none;
+  white-space: nowrap;
+}
+
+// Content text block
+.No {
+  display: flex;
+  -webkit-flex: 1;
+  flex: 1;
+  overflow: hidden;
+}
+
+// Content actions block
+.action,
+.ps,
+.OS,
+.dU {
+  display: inline-block;
+}
+
+.eZ,
+.scroll-list-item.scroll-list-item-measuring-open.scroll-list-item-highlighted .aJ,
+.c4:not(.uZGzjf) .scroll-list-item:not(.scroll-list-item-open).scroll-list-item-highlighted .aJ,
+.scroll-list-item.scroll-list-item-measuring-open:hover .aJ,
+.c4:not(.uZGzjf) .scroll-list-item:not(.scroll-list-item-open):hover .aJ,
+.c4:not(.uZGzjf) .scroll-list-item:not(.scroll-list-item-open).scroll-list-item-menu-open .aJ,
+.c4:not(.uZGzjf) .scroll-list-item.scroll-list-item-measuring-open.scroll-list-item-highlighted .aN,
+.c4:not(.uZGzjf) .scroll-list-item:not(.scroll-list-item-open).scroll-list-item-highlighted .aN,
+.c4:not(.uZGzjf) .scroll-list-item.scroll-list-item-measuring-open:hover .aN,
+.c4:not(.uZGzjf) .scroll-list-item:not(.scroll-list-item-open):hover .aN,
+.c4:not(.uZGzjf) .scroll-list-item:not(.scroll-list-item-open).scroll-list-item-menu-open .aN {
+  display: none;
+}
+
+// Hover actions
+.list-group-item:hover .eZ,
+.c4:not(.uZGzjf) .scroll-list-item:not(.scroll-list-item-open).scroll-list-item-highlighted .eZ,
+.c4:not(.uZGzjf) .scroll-list-item:not(.scroll-list-item-open):hover .eZ,
+.c4:not(.uZGzjf) .scroll-list-item:not(.scroll-list-item-open).scroll-list-item-menu-open .eZ,
+.c4:not(.uZGzjf) .scroll-list-item-measuring-open:not(.scroll-list-item-cluster).scroll-list-item-highlighted .eZ,
+.c4:not(.uZGzjf) .scroll-list-item-measuring-open:not(.scroll-list-item-cluster):hover .eZ,
+.c4:not(.uZGzjf) .scroll-list-item-measuring-open.scroll-list-item-cluster.scroll-list-item-highlighted .aT .eZ,
+.c4:not(.uZGzjf) .scroll-list-item-measuring-open.scroll-list-item-cluster:hover .aT .eZ {
+  display: block;
+}
+
+.c4:not(.uZGzjf) .scroll-list-item:not(.scroll-list-item-open).scroll-list-item-highlighted .eZ,
+.c4:not(.uZGzjf) .scroll-list-item:not(.scroll-list-item-open):hover .eZ,
+.c4:not(.uZGzjf) .scroll-list-item:not(.scroll-list-item-open).scroll-list-item-menu-open .eZ,
+.c4:not(.uZGzjf) .scroll-list-item-measuring-open:not(.scroll-list-item-cluster).scroll-list-item-highlighted .eZ,
+.c4:not(.uZGzjf) .scroll-list-item-measuring-open:not(.scroll-list-item-cluster):hover .eZ,
+.c4:not(.uZGzjf) .scroll-list-item-measuring-open.scroll-list-item-cluster.scroll-list-item-highlighted .aT .eZ,
+.c4:not(.uZGzjf) .scroll-list-item-measuring-open.scroll-list-item-cluster:hover .aT .eZ {
+  // display: block;
+}
+
+.eZ {
+  @include rtl-reflexive-position(right, $card-spacer-x);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.c4:not(.uZGzjf) .scroll-list-item-measuring-open:not(.scroll-list-item-cluster):hover .eZ {
+  display: block;
+}
+
+.action {
+  cursor: pointer;
+  opacity: .6;
+  vertical-align: middle;
+}
+
+.actionIcon {
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+}
+
+// Subject
+.hY,
+.bg,
+.g6 {
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// Description
+.g6 {
+  display: inline-block;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.g6,
+.lo,
+.nP {
+  color: #757575;
+}
+
+.bg ~ .g6::before {
+  margin: 0 .333em;
+  content: "\2013";
+}

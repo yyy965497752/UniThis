@@ -1,0 +1,26 @@
+@mixin theme-dark($root-selector: null, $compound: false) {
+  @if ($root-selector) {
+    @at-root {
+      @if ($compound) {
+        #{$root-selector}--theme-dark#{&},
+        .theme--dark & {
+          @content;
+        }
+      }
+
+      @else {
+        #{$root-selector}--theme-dark &,
+        .theme--dark & {
+          @content;
+        }
+      }
+    }
+  }
+
+  @else {
+    &--theme-dark,
+    .theme--dark & {
+      @content;
+    }
+  }
+}

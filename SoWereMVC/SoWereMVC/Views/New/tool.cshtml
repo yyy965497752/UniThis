@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "tool";
+}
+
+<h1>tool</h1>
+<link href="~/AllClass/Content/sharestyle.css" rel="stylesheet" />
+<link href="~/AllClass/Content/main.css" rel="stylesheet" />
+<link href="~/ToolCss/MySelf.css" rel="stylesheet" />
+<div class="rightcont">
+
+    <div id="xx">
+
+       
+    </div>
+    <input type="text" name="name" value="" />
+
+</div>
+
+<script src="~/tooljs/jquery-1.10.2.js"></script>
+
+<script src="~/tooljs/jquery.form.js"></script>
+<script>
+    $(tool());
+    function tool() {
+        $.ajax({
+            url: 'http://localhost:1850/ycxgo/aiz',
+            type: 'get',
+            dataType: 'json',
+            success: function (data) {
+                $(data).each(
+                    function () {
+                        $("#xx").append('<input type="text" name="name"  value="' + data + '" />');
+                    }
+
+                );
+            }
+
+        });
+    }
+
+</script>

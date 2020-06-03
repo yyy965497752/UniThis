@@ -1,0 +1,130 @@
+{
+  "name": "AppUI",
+  "description": "AppUI - Admin & Frontend Template",
+  "main": [
+    "gulpfile.js"
+  ],
+  "authors": [
+    "rustheme"
+  ],
+  "license": "https://shapebootstrap.net/licenses",
+  "homepage": "http://rustheme.xyz/appui",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.0",
+    "angular-cookies": "^1.5.0",
+    "angular-ui-router": "^0.2.18",
+    "angular-bootstrap": "^1.2.4",
+    "ngstorage": "~0.3.10",
+    "angular-loading-bar": "latest",
+    "angular-translate": "^2.2.0",
+    "angular-translate-loader-static-files": "^2.2.0",
+    "angular-translate-storage-cookie": "^2.2.0",
+    "angular-translate-storage-local": "^2.2.0",
+    "bootstrap": "^3.3.6",
+    "bootstrap-sass": "latest",
+    "bootstrap-colorpicker": "latest",
+    "bootstrap-datepicker": "latest",
+    "eonasdan-bootstrap-datetimepicker": "latest",
+    "bootstrap-maxlength": "latest",
+    "remarkable-bootstrap-notify": "latest",
+    "bootstrap-wizard": "latest",
+    "chartjs": "^1.1.1",
+    "font-awesome": "latest",
+    "ionicons": "latest",
+    "datatables": "~1.10.10",
+    "dropzone": "latest",
+    "flot": "latest",
+    "fullcalendar": "latest",
+    "gmaps": "latest",
+    "highlightjs": "latest",
+    "jquery": "^2.2.4",
+    "jquery-ui": "latest",
+    "jquery-auto-complete": "latest",
+    "jquery-tags-input": "latest",
+    "jquery-maskedinput": "latest",
+    "jquery-placeholder": "latest",
+    "jquery-scrollLock": "^1.1.1",
+    "jquery-slimscroll": "latest",
+    "jquery-sparkline": "latest",
+    "jquery-validation": "latest",
+    "ion.rangeSlider": "latest",
+    "magnific-popup": "latest",
+    "moment": "^2.10.6",
+    "oclazyload": "^1.0.5",
+    "select2": "latest",
+    "slick-carousel": "latest",
+    "sweetalert": "latest"
+  },
+  "overrides": {
+    "bootstrap-maxlength": {
+      "main": "src/bootstrap-maxlength.js"
+    },
+    "datatables": {
+      "main": [
+        "media/js/jquery.dataTables.js",
+        "media/css/jquery.dataTables.css"
+      ]
+    },
+    "flot": {
+      "main": [
+        "./jquery.flot.js",
+        "./jquery.flot.pie.js",
+        "./jquery.flot.stack.js",
+        "./jquery.flot.resize.js"
+      ]
+    },
+    "fullcalendar": {
+      "main": [
+        "dist/fullcalendar.css",
+        "dist/fullcalendar.js",
+        "dist/gcal.js"
+      ]
+    },
+    "jquery-auto-complete": {
+      "main": [
+        "jquery.auto-complete.css",
+        "jquery.auto-complete.js"
+      ]
+    },
+    "select2": {
+      "main": [
+        "dist/css/select2.css",
+        "dist/js/select2.full.js",
+        "dist/js/select2.js"
+      ]
+    }
+  },
+  "group": {
+    "core": [
+      "angular",
+      "angular-cookies",
+      "angular-ui-router",
+      "angular-bootstrap",
+      "angular-translate",
+      "angular-translate-loader-static-files",
+      "angular-translate-storage-local",
+      "angular-translate-storage-cookie",
+      "oclazyload",
+      "ngstorage"
+    ],
+    "plugins": [
+      "bootstrap-colorpicker",
+      "bootstrap-datepicker",
+      "bootstrap-datetimepicker",
+      "bootstrap-maxlength",
+      "bootstrap-notify",
+      "bootstrap-wizard"
+    ]
+  },
+  "resolutions": {
+    "angular": ">=1.5.0",
+    "bootstrap": "^3.3.6",
+    "jquery": ">=2.2.4"
+  }
+}

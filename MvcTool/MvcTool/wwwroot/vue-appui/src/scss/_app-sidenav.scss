@@ -1,0 +1,52 @@
+@import "mixins/rtl";
+
+.app-navigation-panel {
+  display: flex;
+  flex-direction: row;
+}
+
+  .mdc-temporary-drawer__drawer {
+    @include rtl {
+      transform: translateX(calc(100% + 20px));
+    }
+
+    transform: translateX(calc(-100% - 20px));
+  }
+.app-sidenav {
+
+  .mdc-temporary-drawer__drawer {
+    background-color: $white;
+  }
+
+  .mdc-list-group {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .mdc-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 36px;
+    line-height: 36px;
+
+    position: relative;
+    padding-right: $spacer;
+    padding-left: $spacer;
+    outline: none;
+    color: inherit;
+    font-family: Roboto, sans-serif;
+    font-size: 13px;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    letter-spacing: .02em;
+    text-decoration: none;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.app-sidenav__footer {
+  width: 100%;
+  padding: $spacer;
+  border-top: 1px solid $gray-200;
+}

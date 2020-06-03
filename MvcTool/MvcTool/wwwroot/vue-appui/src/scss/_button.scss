@@ -1,0 +1,12 @@
+@import "mixins/rtl";
+
+.btn {
+  cursor: pointer;
+}
+
+.btn__icon {
+  @include rtl-reflexive-box(margin, right, .25rem);
+
+  font-size: $font-size-sm;
+  vertical-align: middle;
+}

@@ -1,0 +1,78 @@
+@import "mixins/rtl";
+
+.form-control {
+
+  @at-root .theme--dark {
+     & .form-control {
+      background-color: rgba(255, 255, 255, .175);
+      border-color: rgba(255, 255, 255, .2);
+      color: #fff;
+    }
+
+    & .form-control::placeholder {
+      color: rgba(255, 255, 255, .5);
+    }
+  }
+}
+
+.form-inline label {
+  @include rtl-reflexive-box(margin, right, .75rem);
+}
+
+/* Floating labels forms */
+.form-floating {
+  position: relative;
+}
+
+/* Material design Labels */
+.form-floating > label {
+
+  // @include translate(0, -24px);
+  position: absolute;
+  top: 6px;
+  // left: $padding-base-horizontal;
+  font-size: 85%;
+}
+
+.form-floating > label {
+
+  // @include transition(all .15s ease-out);
+  // @include translate(0, 0);
+  // color: $input-color-placeholder;
+  font-size: 81.25%;
+  // font-weight: $font-weight-base;
+  line-height: 2;
+  cursor: text;
+}
+
+/* Floating Form controls and input addons */
+.form-floating > .form-control {
+  // padding-top: $padding-base-vertical * 2.5;
+  // padding-bottom: $padding-base-vertical / 2.5;
+  background-color: transparent;
+
+  &:focus {
+    background-color: transparent;
+
+    + label {
+      color: $body-color;
+    }
+  }
+}
+
+.form-floating > .form-control:focus + label,
+.form-floating.open > label {
+
+  // @include translate(0, -25%);
+  font-size: 75%;
+  cursor: default;
+  opacity: .5;
+}
+
+.form-floating .form-control[disabled],
+.form-floating .form-control[readonly],
+.form-floating fieldset[disabled] .form-control {
+
+  // @include box-shadow(none);
+  // border: 1px dashed $gray-200;
+}

@@ -1,0 +1,13 @@
+D:\A_Githup\ycx\one\CoreK\CoreK\bin\Debug\netcoreapp3.1\CoreK.exe
+D:\A_Githup\ycx\one\CoreK\CoreK\bin\Debug\netcoreapp3.1\CoreK.deps.json
+D:\A_Githup\ycx\one\CoreK\CoreK\bin\Debug\netcoreapp3.1\CoreK.runtimeconfig.json
+D:\A_Githup\ycx\one\CoreK\CoreK\bin\Debug\netcoreapp3.1\CoreK.runtimeconfig.dev.json
+D:\A_Githup\ycx\one\CoreK\CoreK\bin\Debug\netcoreapp3.1\CoreK.dll
+D:\A_Githup\ycx\one\CoreK\CoreK\bin\Debug\netcoreapp3.1\CoreK.pdb
+D:\A_Githup\ycx\one\CoreK\CoreK\obj\Debug\netcoreapp3.1\CoreK.csprojAssemblyReference.cache
+D:\A_Githup\ycx\one\CoreK\CoreK\obj\Debug\netcoreapp3.1\CoreK.csproj.CoreCompileInputs.cache
+D:\A_Githup\ycx\one\CoreK\CoreK\obj\Debug\netcoreapp3.1\CoreK.AssemblyInfoInputs.cache
+D:\A_Githup\ycx\one\CoreK\CoreK\obj\Debug\netcoreapp3.1\CoreK.AssemblyInfo.cs
+D:\A_Githup\ycx\one\CoreK\CoreK\obj\Debug\netcoreapp3.1\CoreK.dll
+D:\A_Githup\ycx\one\CoreK\CoreK\obj\Debug\netcoreapp3.1\CoreK.pdb
+D:\A_Githup\ycx\one\CoreK\CoreK\obj\Debug\netcoreapp3.1\CoreK.genruntimeconfig.cache

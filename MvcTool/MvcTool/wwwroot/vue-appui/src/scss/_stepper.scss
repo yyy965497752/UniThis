@@ -1,0 +1,93 @@
+.w-list {
+  &__item {
+  }
+}
+
+.w-list--dense {
+  font-size: .812rem;
+}
+
+/* Styled ordered list */
+.list-numbers {
+  list-style: none;
+  counter-reset: item;
+}
+
+.list-numbers::before {
+  display: inline-block;
+  position: absolute;
+  left: 25px;
+  height: 85%;
+  border: 1px solid $gray-200;
+  content: "";
+}
+
+.list-numbers li {
+  counter-increment: item;
+}
+
+.list-numbers li::before {
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  width: 1.875rem;
+  height: 1.875rem;
+  margin-top: -6.5px;
+  border: 1px solid $gray-200;
+  border-radius: 50%;
+  background-color: $body-bg;
+  font-weight: 400;
+  line-height: 1.875rem;
+  text-align: center;
+  content: counter(item);
+}
+
+.list-numbers.white li::before {
+  background-color: #fff;
+}
+
+.stepper__step {
+  position: relative;
+  margin-top: 5px;
+  margin-left: 16px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  border-left: solid 1px #ccc;
+}
+
+.stepper__index {
+  position: absolute;
+  top: 0;
+  left: -16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: theme-color('primary');
+  color: #fff;
+  font-size: 17px;
+  line-height: 32px;
+  text-align: center;
+  text-indent: -1px;
+}
+
+.stepper__step--disabled .stepper__index {
+  background-color: $gray-500;
+}
+
+.stepper__title {
+  position: relative;
+  margin-bottom: 10px;
+  color: black;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.stepper__step--last {
+  border-left: solid 1px transparent;
+}
+
+.stepper__done {
+  margin-top: 16px;
+  padding-left: 32px;
+}

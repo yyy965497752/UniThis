@@ -1,0 +1,31 @@
+@import "mixins/rtl";
+
+.list-group-item {
+  &:not(.list-group-item-action):hover,
+  &:not(.list-group-item-action):focus {
+    color: $link-color;
+  }
+
+  &__start-detail {
+    @include rtl-reflexive-box(margin, right, 1rem);
+  }
+
+  &__text {
+    flex: 1;
+  }
+
+  &__title,
+  &__subtitle {
+    display: block;
+    margin: 0;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    max-height: $font-size-base * $line-height-base;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__subtitle {
+    opacity: .77;
+  }
+}

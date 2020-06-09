@@ -1,0 +1,44 @@
+@import "../mixins/rtl";
+
+// TODO: Revisit when VueTables will be updated to Bootstrap 4
+.VueTables {
+  .pull-left {
+    float: left;
+
+    @include rtl {
+      float: right;
+    }
+  }
+
+  .pull-right {
+    float: right;
+
+    @include rtl {
+      float: left;
+    }
+  }
+
+  &__sort-icon {
+    vertical-align: middle;
+
+    &--asc::after {
+      content: "\2191";
+    }
+
+    &--desc::after {
+      content: "\2193";
+    }
+  }
+}
+
+.VuePagination {
+  text-align: center;
+
+  &__pagination {
+    justify-content: center;
+  }
+
+  &__count {
+    margin-bottom: 0;
+  }
+}

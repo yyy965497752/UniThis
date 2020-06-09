@@ -1,0 +1,29 @@
+// Fill the height of viewport
+// NOTE: html and body elements should have 100% height too
+.app-shell {
+  height: 100%;
+}
+
+.app-layout {
+  position: relative;
+  flex-grow: 1;
+}
+
+.app-content-panel {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.app-content__layout-below-topbar {
+  padding-top: 0;
+}
+
+.app-content__card-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 24px;
+}

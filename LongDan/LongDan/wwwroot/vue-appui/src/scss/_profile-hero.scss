@@ -1,0 +1,25 @@
+.profile-hero {
+  position: relative;
+  margin-bottom: $spacer;
+
+  &__background {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+  }
+
+  &__foreground {
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+    background-color: #fff;
+  }
+
+  &__avatar {
+    width: 96px;
+    min-width: 96px;
+    height: 96px;
+    @include rtl-reflexive-box(margin, right, 1rem);
+    margin-top: -48px;
+  }
+}

@@ -1,0 +1,165 @@
+<!-- Page Content -->
+<div class="container-fluid p-y-md">
+
+	<!-- Alerts -->
+	<div class="card">
+		<div class="card-header">
+			<h4>Alerts</h4>
+		</div>
+		<div class="card-block">
+			<div class="alert alert-success">
+				<p><strong>Well done!</strong> You successfully read this important alert message.</p>
+			</div>
+			<div class="alert alert-info">
+				<p><strong>Heads up!</strong> This alert needs your attention, but it's not super important.</p>
+			</div>
+			<div class="alert alert-warning">
+				<p><strong>Warning!</strong> Better check yourself, you're not looking too good.</p>
+			</div>
+			<div class="alert alert-danger">
+				<p><strong>Oh snap!</strong> Change a few things up and try submitting again.</p>
+			</div>
+		</div><!-- .card-block -->
+	</div>
+	<!-- End Alerts -->
+
+	<!-- Dismissable alerts -->
+	<div class="card">
+		<div class="card-header">
+			<h4>Dismissable alerts</h4>
+		</div>
+		<div class="card-block">
+			<div class="alert alert-success alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<p><strong>Well done!</strong> You successfully read this important alert message.</p>
+			</div>
+			<div class="alert alert-info alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<p><strong>Heads up!</strong> This alert needs your attention, but it's not super important.</p>
+			</div>
+			<div class="alert alert-warning alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<p><strong>Warning!</strong> Better check yourself, you're not looking too good.</p>
+			</div>
+			<div class="alert alert-danger alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<p><strong>Oh snap!</strong> Change a few things up and try submitting again.</p>
+			</div>
+		</div><!-- .card-block -->
+	</div>
+	<!-- End Dismissable alerts -->
+	
+	<!-- Links in Alerts -->
+	<div class="card">
+		<div class="card-header">
+			<h4>Links in alerts</h4>
+		</div>
+		<div class="card-block">
+			<div class="alert alert-success alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<strong>Well done!</strong> <a class="alert-link" href="#">Change a few things up</a> and try submitting again.
+			</div>
+			<div class="alert alert-info alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<strong>Heads up!</strong> Change a <a class="alert-link" href="#">few things</a> up and try submitting again.
+			</div>
+			<div class="alert alert-warning alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<strong>Warning!</strong> Best check yo self, <a class="alert-link" href="#">you're not looking too good.</a>
+			</div>
+			<div class="alert alert-danger alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<strong>Oh snap!</strong> Change a few things up and <a class="alert-link" href="#">try submitting again.</a>
+			</div>
+		</div><!-- .card-block -->
+	</div>
+	<!-- End Links in alerts -->
+
+	<!-- Notify (By adding data-js-notify attr, js-notify directive is initialized in app/directives/js-notify.js) -->
+	<div class="card">
+		<div class="card-header">
+			<h4>Bootstrap Notify</h4>
+		</div>
+		<div class="card-block">
+			<div class="row">
+				<!-- Top left alerts -->
+				<div class="col-sm-6 col-lg-4">
+					<h4 class="h5">Top Left</h4>
+					<p class="m-b-md">
+						<button class="btn btn-sm btn-success" data-js-notify="{type: 'success', align: 'left', message: 'Wow! Success alert!'}">Success</button>
+						<button class="btn btn-sm btn-info" data-js-notify="{type: 'info', align: 'left', message: 'Congrats! Something happened!'}">Info</button>
+						<button class="btn btn-sm btn-warning" data-js-notify="{type: 'warning', align: 'left', message: 'Warning! Watch closely!'}">Warning</button>
+						<button class="btn btn-sm btn-danger" data-js-notify="{type: 'danger', align: 'left', message: 'Oh, no! You run out of toilet paper!'}">Error</button>
+					</p>
+				</div>
+				<!-- End top left alerts -->
+
+				<!-- Top center alerts -->
+				<div class="col-sm-6 col-lg-4">
+					<h4 class="h5">Top Center</h4>
+					<p class="m-b-md">
+						<button class="btn btn-sm btn-success" data-js-notify="{type: 'success', align: 'center', message: 'Wow! Success alert!'}">Success</button>
+						<button class="btn btn-sm btn-info" data-js-notify="{type: 'info', align: 'center', message: 'Congrats! Something happened!'}">Info</button>
+						<button class="btn btn-sm btn-warning" data-js-notify="{type: 'warning', align: 'center', message: 'Warning! Watch closely!'}">Warning</button>
+						<button class="btn btn-sm btn-danger" data-js-notify="{type: 'danger', align: 'center', message: 'Oh, no! You run out of toilet paper!'}">Error</button>
+					</p>
+				</div>
+				<!-- End top center alerts -->
+
+				<!-- Top right alerts -->
+				<div class="col-sm-6 col-lg-4">
+					<h4 class="h5">Top Right</h4>
+					<p class="m-b-md">
+						<button class="btn btn-sm btn-success" data-js-notify="{type: 'success', align: 'right', message: 'Wow! Success alert!'}">Success</button>
+						<button class="btn btn-sm btn-info" data-js-notify="{type: 'info', align: 'right', message: 'Congrats! Something happened!'}">Info</button>
+						<button class="btn btn-sm btn-warning" data-js-notify="{type: 'warning', align: 'right', message: 'Warning! Watch closely!'}">Warning</button>
+						<button class="btn btn-sm btn-danger" data-js-notify="{type: 'danger', align: 'right', message: 'Oh, no! You run out of toilet paper!'}">Error</button>
+					</p>
+				</div>
+				<!-- End top right alerts -->
+
+				<!-- Bottom left alerts -->
+				<div class="col-sm-6 col-lg-4">
+					<h4 class="h5">Bottom Left</h4>
+					<p class="m-b">
+						<button class="btn btn-sm btn-success" data-js-notify="{type: 'success', from: 'bottom', align: 'left', message: 'Wow! Success alert!'}">Success</button>
+						<button class="btn btn-sm btn-info" data-js-notify="{type: 'info', from: 'bottom', align: 'left', message: 'Congrats! Something happened!'}">Info</button>
+						<button class="btn btn-sm btn-warning" data-js-notify="{type: 'warning', from: 'bottom', align: 'left', message: 'Warning! Watch closely!'}">Warning</button>
+						<button class="btn btn-sm btn-danger" data-js-notify="{type: 'danger', from: 'bottom', align: 'left', message: 'Oh, no! You run out of toilet paper!'}">Error</button>
+					</p>
+				</div>
+				<!-- End bottom left alerts -->
+
+				<!-- Bottom center alerts -->
+				<div class="col-sm-6 col-lg-4">
+					<h4 class="h5">Bottom Center</h4>
+					<p class="m-b">
+						<button class="btn btn-sm btn-success" data-js-notify="{type: 'success', from: 'bottom', align: 'center', message: 'Wow! Success alert!'}">Success</button>
+						<button class="btn btn-sm btn-info" data-js-notify="{type: 'info', from: 'bottom', align: 'center', message: 'Congrats! Something happened!'}">Info</button>
+						<button class="btn btn-sm btn-warning" data-js-notify="{type: 'warning', from: 'bottom', align: 'center', message: 'Warning! Watch closely!'}">Warning</button>
+						<button class="btn btn-sm btn-danger" data-js-notify="{type: 'danger', from: 'bottom', align: 'center', message: 'Oh, no! You run out of toilet paper!'}">Error</button>
+					</p>
+				</div>
+				<!-- End bottom center alerts -->
+
+				<!-- Bottom right alerts -->
+				<div class="col-sm-6 col-lg-4">
+					<h4 class="h5">Bottom Right</h4>
+					<p class="m-b">
+						<button class="btn btn-sm btn-success" data-js-notify="{type: 'success', from: 'bottom', align: 'right', message: 'Wow! Success alert!'}">Success</button>
+						<button class="btn btn-sm btn-info" data-js-notify="{type: 'info', from: 'bottom', align: 'right', message: 'Congrats! Something happened!'}">Info</button>
+						<button class="btn btn-sm btn-warning" data-js-notify="{type: 'warning', from: 'bottom', align: 'right', message: 'Warning! Watch closely!'}">Warning</button>
+						<button class="btn btn-sm btn-danger" data-js-notify="{type: 'danger', from: 'bottom', align: 'right', message: 'Oh, no! You run out of toilet paper!'}">Error</button>
+					</p>
+				</div>
+				<!-- End bottom right alerts -->
+
+			</div><!-- .row -->
+			</table>
+			</div><!-- .table-responsive -->
+
+		</div><!-- .card-block -->
+	</div><!-- .card -->
+	<!-- End Notify -->
+</div>
+<!-- End Page Content -->

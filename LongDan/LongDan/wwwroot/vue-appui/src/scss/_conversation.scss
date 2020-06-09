@@ -1,0 +1,93 @@
+@import "mixins/rtl";
+
+.conversation {
+  &__message {
+    display: flex;
+    max-width: 300px;
+    margin-bottom: $spacer;
+
+    &--align-end {
+      flex-direction: row-reverse;
+      margin-left: auto;
+
+      .conversation__avatar {
+        @include rtl-reflexive-box(margin, left, 1rem);
+      }
+
+      .conversation__bubble {
+        background-color: theme-color('primary');
+        color: $white;
+
+        &::before {
+          right: -8px;
+          left: auto;
+          margin-right: 2px;
+          margin-left: 0;
+          border-right: 0;
+          border-left: 6px solid theme-color('primary');
+        }
+      }
+    }
+  }
+
+  &__message--align-end {
+  }
+
+  &__avatar {
+    @include rtl-reflexive-box(margin, right, 1rem);
+  }
+
+  &__bubble {
+    display: inline-block;
+    position: relative;
+    padding: .75rem 1rem;
+    border-radius: 9px;
+    background-color: $white;
+    text-align: left;
+  }
+}
+
+.conversation__bubble + .conversation__bubble {
+  margin-top: 5px;
+}
+
+.conversation__bubble::before {
+  display: inline-block;
+  position: absolute;
+  top: 21px;
+  left: -8px;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  border-top: 6px solid transparent;
+  border-right: 6px solid $white;
+  border-bottom: 6px solid transparent;
+  content: "";
+  vertical-align: middle;
+}
+
+.conversation__form {
+  transition: background-color ease .218s, box-shadow ease .218s,border ease .218s;
+  overflow-x: hidden;
+  overflow-y: visible;
+  position: relative;
+  border: 1px solid transparent;
+
+  .avatar {
+    @include rtl-reflexive-box(margin, right, 1rem);
+  }
+}
+
+.conversation__input {
+  line-height: 16px;
+  cursor: text;
+  min-height: 18px;
+  outline: 0;
+  padding-bottom: 2px;
+  padding-left: 6px;
+  padding-right: 0;
+  padding-top: 2px;
+  position: relative;
+  width: 100%;
+  word-wrap: break-word;
+}

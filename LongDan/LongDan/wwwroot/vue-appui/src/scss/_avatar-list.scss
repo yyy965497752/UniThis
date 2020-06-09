@@ -1,0 +1,36 @@
+// TODO: Consider merge this file with "_avatar.scss"
+@import "mixins/rtl";
+
+.avatar-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  // TODO: Consider renaming "avatar-list__item" to "avatar-list-item"
+  &__item {
+    display: inline-block;
+    @include rtl-reflexive-box(margin, right, .5rem);
+
+    &:last-child {
+      @include rtl-reflexive-box(margin, right, 0);
+    }
+  }
+}
+
+.avatar-list--dense {
+  // TODO: Consider renaming "avatar-list__item" to "avatar-list-item"
+  .avatar-list__item {
+    @include rtl-reflexive-box(margin, right, -.5rem);
+
+    &:last-child {
+      @include rtl-reflexive-box(margin, right, 0);
+    }
+  }
+
+  .avatar {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+  }
+}

@@ -1,0 +1,35 @@
+@import "mixins/rtl";
+
+.swatch {
+  display: inline-block;
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: currentColor;
+  background-position: center;
+  background-size: cover;
+  box-sizing: content-box;
+
+  @include rtl-reflexive-box(margin, right, 5px);
+
+  &::before {
+    position: absolute;
+    top: -5px;
+    width: 40px;
+    height: 40px;
+    transform: scale(.8);
+    transition: transform .2s ease-out, opacity .2s ease-out;
+    border: 2px solid;
+    border-radius: 50%;
+    content: "";
+    opacity: 0;
+
+    @include rtl-reflexive-position(left, -5px);
+  }
+
+  &--active::before {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

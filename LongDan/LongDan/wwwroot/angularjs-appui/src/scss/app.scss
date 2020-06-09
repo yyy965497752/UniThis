@@ -1,0 +1,27 @@
+/*!
+ * AppUI - Admin & Frontend Template
+ * Copyright 2016 © rustheme
+ */
+
+// Core variables and mixins
+@import "variables";
+//@import "bootstrap/mixins";
+
+// Do not remove the comments below. It's the markers used by
+// gulp-inject to inject required scss from bower_components
+// inject:scss
+// endinject
+
+// Place App mixins after Bootstrap ones so we can overwrite them
+@import "mixins";
+
+// App Modules
+@import "app/app.layout";
+@import "app/app.forms";
+@import "app/app.lists";
+@import "app/app.cards";
+@import "app/app.images";
+@import "app/app.utilities";
+
+// Plugins
+@import "app/extend.plugins";

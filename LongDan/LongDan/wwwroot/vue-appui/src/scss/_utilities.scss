@@ -1,0 +1,36 @@
+@import "mixins/rtl";
+
+$dl-gutter: 1rem;
+
+/* stylelint-disable selector-no-type */
+.dl-inline {
+  display: flex;
+  // flex-flow: row;
+  flex-wrap: wrap;
+
+  dt {
+    flex: 0 0 calc(50% - #{$dl-gutter / 2});
+    @include rtl-reflexive-box(margin, right, $dl-gutter / 2);
+  }
+
+  dd {
+    flex: 0 0 calc(50% - #{$dl-gutter / 2});
+    @include rtl-reflexive-box(margin, left, $dl-gutter / 2);
+  }
+}
+
+.dl-inline--side-by-side {
+  dt {
+    text-align: right;
+  }
+}
+/* stylelint-enable selector-no-type */
+
+// Cursor
+.cursor-move {
+  cursor: move;
+}
+
+.fade.show {
+  display: block;
+}

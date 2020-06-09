@@ -1,0 +1,77 @@
+@import "mixins/rtl";
+
+$avatar-size: 48px !default;
+$avatar-small-size: 32px !default;
+$avatar-child-size: 20px !default;
+
+.avatar {
+  display: inline-block;
+  width: $avatar-size;
+  min-width: $avatar-size;
+  height: $avatar-size;
+  border-radius: $border-radius;
+  text-align: center;
+  vertical-align: middle;
+
+  &--small {
+    width: $avatar-small-size;
+    min-width: $avatar-small-size;
+    height: $avatar-small-size;
+  }
+}
+
+// TODO: Add vertical layout
+// TODO: Simplify scss to avoid code repetition
+.avatar-with-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .avatar {
+    @include rtl-reflexive-box(margin, right, 1rem);
+
+    &--small {
+      @include rtl-reflexive-box(margin, right, .75rem);
+    }
+  }
+
+  &.flex-row-reverse {
+    .avatar {
+      @include rtl-reflexive-box(margin, left, 1rem);
+
+      &--small {
+        @include rtl-reflexive-box(margin, left, .75rem);
+      }
+    }
+  }
+}
+
+/* stylelint-disable selector-no-type */
+/* stylelint-disable selector-no-qualifying-type */
+a.avatar-with-name {
+  color: inherit;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+/* stylelint-enable selector-no-type */
+/* stylelint-enable selector-no-qualifying-type */
+
+.avatar-with-child {
+  position: relative;
+}
+
+.avatar--child {
+  @include rtl-reflexive-position(right, -15%);
+
+  position: absolute;
+  bottom: -9%;
+  width: $avatar-child-size;
+  min-width: $avatar-child-size;
+  height: $avatar-child-size;
+  border: 1px solid $gray-200;
+}

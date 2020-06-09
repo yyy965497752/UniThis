@@ -1,0 +1,66 @@
+.card {
+  margin-bottom: $spacer;
+  border: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+
+  @at-root .theme--dark {
+    .card {
+      background-color: rgba(255, 255, 255, .05);
+    }
+  }
+}
+
+.card-header {
+  background-color: transparent;
+  line-height: inherit;
+}
+
+.card-header + .card-block {
+  padding-top: 0;
+}
+
+.card-title {
+  margin-bottom: $headings-margin-bottom;
+}
+
+.card-block > :last-child {
+  margin-bottom: 0;
+}
+
+a.card-block {
+  :hover {
+    background-color: #eee;
+  }
+
+  @at-root .theme--dark {
+    a.card:hover {
+      background-color: $body-bg;
+    }
+  }
+}
+
+.card-status {
+  border-top: 4px solid theme-color('primary');
+
+  &-success {
+    border-top-color: theme-color('success');
+  }
+
+  &-info {
+    border-top-color: theme-color('info');
+  }
+
+  &-warning {
+    border-top-color: theme-color('warning');
+  }
+
+  &-danger {
+    border-top-color: theme-color('danger');
+  }
+}
+
+.card-link-list {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}

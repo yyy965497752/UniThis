@@ -1,0 +1,126 @@
+<!-- Page Content -->
+<div class="container-fluid p-y-md">
+	<!-- Maps and Search functionality is initialized in js/controllers.js -> CompMapsGoogleCtrl Controller, for more examples you can check out https://hpneo.github.io/gmaps/ -->
+	<!-- Maps Row -->
+	<div class="row">
+		<div class="col-lg-12">
+			<!-- Search Map -->
+			<div class="card">
+				<div class="card-block">
+					<!-- Search Form -->
+					<form class="js-form-search" action="index.html" method="post">
+						<div class="input-group input-group-lg">
+							<input class="js-search-address form-control" type="text" placeholder="Search... (eg: Moscow)" />
+							<div class="input-group-btn">
+								<button class="btn btn-primary" type="submit"><i class="ion-ios-search-strong"></i></button>
+							</div>
+						</div>
+					</form>
+					<!-- End Search Form -->
+				</div>
+				<!-- Search Map Container -->
+				<div id="js-map-search" style="height: 500px;"></div>
+			</div>
+			<!-- End Search Map -->
+		</div>
+		<div class="col-lg-6">
+			<!-- Satellite Map -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Satellite Map</h4>
+					<ul class="card-actions">
+						<li>
+							<button type="button"><i class="ion-more"></i></button>
+						</li>
+					</ul>
+				</div>
+				<!-- Satellite Map Container -->
+				<div id="js-map-sat" style="height: 350px;"></div>
+			</div>
+		</div>
+		   <!-- End Satellite Map -->
+
+		<div class="col-lg-6">
+			<!-- Terrain Map -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Terrain Map</h4>
+					<ul class="card-actions">
+						<li>
+							<button type="button"><i class="ion-more"></i></button>
+						</li>
+					</ul>
+				</div>
+				<!-- Terrain Map Container -->
+				<div id="js-map-ter" style="height: 350px;"></div>
+			</div>
+			<!-- End Terrain Map -->
+		</div>
+		<div class="col-lg-6">
+			<!-- Overlay Map -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Overlay Map</h4>
+					<ul class="card-actions">
+						<li>
+							<button type="button"><i class="ion-more"></i></button>
+						</li>
+					</ul>
+				</div>
+				<!-- Overlay Map Container -->
+				<div id="js-map-overlay" style="height: 350px;"></div>
+			</div>
+			<!-- End Overlay Map -->
+		</div>
+		<div class="col-lg-6">
+			<!-- Map Markers Map -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Map Markers Map</h4>
+					<ul class="card-actions">
+						<li>
+							<button type="button"><i class="ion-more"></i></button>
+						</li>
+					</ul>
+				</div>
+				<!-- Markers Map Container -->
+				<div id="js-map-markers" style="height: 350px;"></div>
+			</div>
+			<!-- End Map Markers Map -->
+		</div>
+		<div class="col-lg-6">
+			<!-- Street Map -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Street Map</h4>
+					<ul class="card-actions">
+						<li>
+							<button type="button"><i class="ion-more"></i></button>
+						</li>
+					</ul>
+				</div>
+				<!-- Street Map Container -->
+				<div id="js-map-street" style="height: 350px;"></div>
+			</div>
+			<!-- End Street Map -->
+		</div>
+		<div class="col-lg-6">
+			<!-- Geolocation Map -->
+			<div class="card">
+				<div class="card-header">
+					<h4>Geolocation Map</h4>
+					<ul class="card-actions">
+						<li>
+							<button type="button"><i class="ion-more"></i></button>
+						</li>
+					</ul>
+				</div>
+				<!-- Geolocation Map Container -->
+				<div id="js-map-geo" style="height: 350px;"></div>
+			</div>
+			<!-- End Geolocation Map -->
+		</div>
+	</div>
+	<!-- End Maps Row -->
+</div>
+<!-- End Page Content -->

@@ -1,0 +1,22 @@
+.scorecard {
+  flex: 1 1 0;
+
+  &__value {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.166;
+  }
+
+  &__label {
+    font-size: $font-size-sm;
+  }
+}
+
+.scorecard-row {
+  display: flex;
+
+  .scorecard:not(:first-child) {
+    @include rtl-reflexive-box(margin, left, 1rem);
+  }
+}

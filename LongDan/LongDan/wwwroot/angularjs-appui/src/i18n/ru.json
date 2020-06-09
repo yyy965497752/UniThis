@@ -1,0 +1,114 @@
+{
+	"header" : {
+		"navbar" : {
+			"page_title": {
+				"Dashboard": "Dashboard",
+				"Calendar": "Cal"
+			}
+		}
+	},
+	"drawer": {
+		"nav": {
+			"apps": {
+				"APPS": "Приложения",
+				"DASHBOARD": "Админ-панель",
+				"CALENDAR": "Календарь",
+				"HTML_VERSION": "HTML-версия"
+			},
+			"components": {
+				"COMPONENTS": "Компоненты",
+				"ui": {
+					"UI_ELEMENTS": "Интерфейс",
+					"CARDS": "Карточки",
+					"LAYOUT": "Разметка",
+					"ALERTS": "Оповещения",
+					"TABS": "Вкладки",
+					"MODALS_TOOLTIPS": "Всплывающие окна и подсказки",
+					"DRAGGABLE": "Перетаскиваемые объекты",
+					"SLIDERS": "Слайдеры",
+					"SCROLLING": "Скроллинг",
+					"SYNTAX_HIGHLIGHT": "Подсветка синтаксиса"
+				},
+				"tables": {
+					"TABLES": "Таблицы",
+					"TOOLS": "Утилиты",
+					"DATATABLES": "Таблицы данных"
+				},
+				"forms": {
+					"FORMS": "Формы",
+					"PICKERS_SELECT": "Селекторы",
+					"VALIDATION": "Валидация",
+					"WIZARD": "Визард"
+				},
+				"maps": {
+					"MAPS": "Карты",
+					"GOOGLE": "Гугл карты",
+					"GOOGLE_FULL": "Полноразмерная",
+					"VECTOR": "Векторные карты"
+				},
+				"CHARTS": "Чарты / Диаграммы"
+			}
+		},
+		"footer": {
+			"TEMPLATE_NAME": "Шаблон AppUI",
+			"TEMPLATE_PURCHASE": "Купить лицензию"
+		}
+	},
+	"aside" : {
+		"nav" : {
+			"HEADER" : "Навигация",
+			"DASHBOARD" : "Админ-панель",
+			"CALENDAR" : "Календарь",
+			"EMAIL" : "E-Mail",
+			"WIDGETS" : "Виджеты",
+			"components" : {
+				"COMPONENTS" : "Компоненты",
+				"ui_kits" : {
+					"UI_KITS" : "Интерфейс",
+					"BUTTONS" : "Кнопки",
+					"ICONS" : "Иконки",
+					"GRID" : "Модульная сетка",
+					"BOOTSTRAP" : "Bootstrap",
+					"SORTABLE" : "Sortable",
+					"PORTLET" : "Карточки",
+					"TIMELINE" : "Хронологическая линейка",
+					"GOOGLE_MAP" : "Гуглокарта",
+					"GOOGLE_MAP_FULL" : "Полноразмерная Гуглокарта",
+					"VECTOR_MAP" : "Векторные карты"
+				},
+				"table" : {
+					"TABLE" : "Таблицы",
+					"TABLE_STATIC" : "Tabelle statisch",
+					"DATATABLE" : "Datatable",
+					"FOOTABLE" : "Footable"
+				},
+				"form" : {
+					"FORM" : "Формы",
+					"FORM_ELEMENTS" : "Элементы",
+					"FORM_VALIDATION" : "Валидация",
+					"FORM_WIZARD" : "Form wizard"
+				},
+				"CHART" : "Чарты / Диаграммы",
+				"pages" : {
+					"PAGES" : "Seiten",
+					"PROFILE" : "Профиль",
+					"POST" : "Post",
+					"SEARCH" : "Поиск",
+					"INVOICE" : "Rechnung",
+					"LOCK_SCREEN" : "Sperrbildschirm",
+					"SIGNIN" : "Логин",
+					"SIGNUP" : "Регистрация",
+					"FORGOT_PASSWORD" : "Восстановление пароля",
+					"404" : "404"
+				}
+			},
+			"your_stuff" : {
+				"YOUR_STUFF": "Ihr Material",
+				"PROFILE" : "Profil",
+				"DOCUMENTS" : "Dokumente"
+			}
+		},
+		"MILESTONE" : "Meilenstein",
+		"RELEASE" : "Freisetzung"
+	}
+}

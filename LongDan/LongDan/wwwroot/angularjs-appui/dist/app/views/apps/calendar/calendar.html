@@ -1,0 +1,40 @@
+<!-- Page Content -->
+<div class="container-fluid p-y-md">
+	<!-- Calendar and Events functionality is initialized in app_calendar.ctrl.js -> AppCalendarCtrl Controller, for more info and examples please check out http://fullcalendar.io/ -->
+	<div class="row">
+		<div class="col-md-4 col-md-push-8 col-lg-2 col-lg-push-10">
+			<!-- Add Event Form -->
+			<form class="js-form-add-event m-b" action="index.html" method="post">
+				<div class="input-group">
+					<input class="js-add-event form-control" type="text" placeholder="Add event.." />
+					<div class="input-group-btn">
+						<button class="btn btn-primary" type="submit"><i class="ion-android-add"></i></button>
+					</div>
+				</div>
+			</form>
+			<!-- End Add Event Form -->
+
+			<!-- Event List -->
+			<ul class="js-events list list-events m-b-sm">
+				<li>Running</li>
+				<li>Biking</li>
+				<li>Traveling</li>
+				<li>Piloting</li>
+				<li>Dancing</li>
+			</ul>
+			<div class="text-center text-muted m-b">
+				<small><em><i class="fa fa-arrows m-r-xs"></i> Drag and drop events on the calendar</em></small>
+			</div>
+			<!-- End Event List -->
+		</div>
+
+		<div class="col-md-8 col-md-pull-4 col-lg-10 col-lg-pull-2">
+			<div class="card card-block">
+				<!-- Calendar Container -->
+				<div class="js-calendar"></div>
+			</div>
+		</div>
+	</div>
+	<!-- End Calendar -->
+</div>
+<!-- End Page Content -->

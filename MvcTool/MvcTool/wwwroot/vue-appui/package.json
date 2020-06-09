@@ -21,7 +21,7 @@
     "d3": "^4.8.0",
     "datamaps": "^0.5.8",
     "hchs-vue-charts": "^1.2.8",
-    "jquery": "^1.9.1",
+    "jquery": "^3.5.0",
     "material-components-web": "^0.24.0",
     "popper.js": "^1.12.6",
     "vue": "^2.3.0",

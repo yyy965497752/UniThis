@@ -16,7 +16,7 @@
   "dependencies": {
     "axios": "^0.16.1",
     "bootstrap": "^4.0.0-beta.2",
-    "bootstrap-vue": "^0.16.1",
+    "bootstrap-vue": "^2.0.0",
     "chart.js": "2.5.0",
     "d3": "^4.8.0",
     "datamaps": "^0.5.8",
